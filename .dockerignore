@@ -1,0 +1,8 @@
+mysql-data-new/
+mysql_data_new/
+*.cnf
+*.pid
+*.sock
+*.err
+*.log
+new-data/
