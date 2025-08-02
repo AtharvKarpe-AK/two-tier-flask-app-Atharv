@@ -8,7 +8,7 @@ services:
       MYSQL_DATABASE: tws-db2
       MYSQL_ROOT_PASSWORD: admin
     volumes:
-      - ./new-data:/var/lib/mysql
+      - new-data:/var/lib/mysql
     networks:
       - Newnet
     ports:
