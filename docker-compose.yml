@@ -22,9 +22,7 @@ services:
       timeout: 5s
 
   flask:
-    build:
-      context: .
-      dockerfile: Dockerfile-multistage
+    image: atharvkarpe/flaskapp:latest
     container_name: flask-app
     environment:
       MYSQL_USER: admin
