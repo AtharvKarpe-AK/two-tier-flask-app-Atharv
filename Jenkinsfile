@@ -6,12 +6,12 @@ pipeline {
                 git url: "https://github.com/AtharvKarpe-AK/two-tier-flask-app-Atharv.git", branch: "master"
                 echo "Code clone ho gaya ...."  
             }
+        }
 
         stage("Trivy file system scan"){
             steps{
                 sh "trivy fs . -o results.json"
             }
-        }
         }
         stage("Build"){
             steps{
@@ -55,14 +55,14 @@ post {
         emailext body: 'Hello Atharv good news: Build Successful for demo cicd app!',
         subject: 'Jenkins Build Successful',
         to: 'atharvkkarpe@gmail.com'
-        attachmentPattern: 'results.json'
+        attachmentsPattern: 'results.json'
         
     }
     failure {
         emailext body: 'Hello Atharv bad news: Build failed for demo cicd app!',
         subject: 'Jenkins Build Failed',
         to: 'atharvkkarpe@gmail.com'
-        attachmentPattern: 'results.json'
+        attachmentsPattern: 'results.json'
     }
 }
 }
