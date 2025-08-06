@@ -4,7 +4,7 @@ pipeline {
         stage("Code"){
             steps{
                 git url: "https://github.com/AtharvKarpe-AK/two-tier-flask-app-Atharv.git", branch: "master"
-                echo "Code clone ho gaya ...."  
+                echo "Code clone ho gaya ..."  
             }
         }
 
