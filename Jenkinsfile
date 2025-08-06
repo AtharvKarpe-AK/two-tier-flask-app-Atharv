@@ -52,17 +52,21 @@ pipeline {
     }
 post {
     success {
-        emailext body: 'Hello Atharv good news: Build Successful for demo cicd app!',
+        emailext (
+        body: 'Hello Atharv good news: Build Successful for demo cicd app!',
         subject: 'Jenkins Build Successful',
         to: 'atharvkkarpe@gmail.com'
         attachmentsPattern: 'results.json'
+        )
         
     }
     failure {
-        emailext body: 'Hello Atharv bad news: Build failed for demo cicd app!',
+        emailext (
+        body: 'Hello Atharv bad news: Build failed for demo cicd app!',
         subject: 'Jenkins Build Failed',
         to: 'atharvkkarpe@gmail.com'
         attachmentsPattern: 'results.json'
+        )
     }
 }
 }
