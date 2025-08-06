@@ -55,7 +55,7 @@ post {
         emailext (
         body: 'Hello Atharv good news: Build Successful for demo cicd app!',
         subject: 'Jenkins Build Successful',
-        to: 'atharvkkarpe@gmail.com'
+        to: 'atharvkkarpe@gmail.com',
         attachmentsPattern: 'results.json'
         )
         
@@ -64,7 +64,7 @@ post {
         emailext (
         body: 'Hello Atharv bad news: Build failed for demo cicd app!',
         subject: 'Jenkins Build Failed',
-        to: 'atharvkkarpe@gmail.com'
+        to: 'atharvkkarpe@gmail.com',
         attachmentsPattern: 'results.json'
         )
     }
