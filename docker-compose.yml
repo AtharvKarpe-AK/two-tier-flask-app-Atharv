@@ -22,7 +22,7 @@ services:
       timeout: 5s
 
   flask:
-    image: atharvkarpe/flaskapp:latest
+    image: atharvkarpe/flask-app-1:latest
     container_name: flask-app
     environment:
       MYSQL_USER: admin
